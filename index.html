@@ -191,8 +191,8 @@
 </head>
 <body>
 
-    <audio id="bgMusic" loop>
-        <source src="YOUR_MUSIC_LINK_HERE.mp3" type="audio/mpeg">
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
     </audio>
 
     <div class="ballroom-lights">
@@ -223,12 +223,14 @@
         <div id="screen3" class="screen">
             <div class="decor">✨ 🥂 ✨</div>
             <h1>Flawless, my dear!</h1>
+            <p>The arrangements are settled. We shall make our grand appearance at the esteemed <span class="highlight-text">Malad Social</span>, precisely as the clock strikes <span class="highlight-text">7 PM
             <p>You are undeniably the diamond of the season. Pray tell, upon which evening shall we hold court?</p>
             <div class="days-grid">
                 <button onclick="sendRaven('Wednesday (Mar 18)')">Wednesday Eve (Mar 18)</button>
                 <button onclick="sendRaven('Thursday (Mar 19)')">Thursday Eve (Mar 19)</button>
                 <button onclick="sendRaven('Friday (Mar 20)')">Friday Eve (Mar 20)</button>
-                <button onclick="sendRaven('The Weekend')">This Weekend</button>
+                <button onclick="sendRaven('Saturday (Mar 21')">Saturday Eve (Mar 21)</button>
+                <button onclick="sendRaven('Sunday (Mar 22')">Sunday Eve (Mar 22)</button>
             </div>
             <div class="signature">Yours truly.</div>
         </div>
@@ -314,8 +316,8 @@
         }
 
         function sendRaven(day) {
-            const phoneNumber = "YOURNUMBER"; 
-            const text = encodeURIComponent(`Dearest, I have reviewed your grand invitation. Let us promenade this ${day}! 🥂✨`);
+            const phoneNumber = "+918652311996"; 
+            const text = encodeURIComponent(`Dearest, I accept your grand invitation. I shall meet you at Malad Social this ${day} at 7 PM! 🥂✨`);
             window.location.href = `https://wa.me/${phoneNumber}?text=${text}`;
         }
     </script>
